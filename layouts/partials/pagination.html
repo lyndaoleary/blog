@@ -1,0 +1,49 @@
+<div class="text-center">
+	<ul class="pagination">
+		{{ $baseurl := .Site.BaseURL }}
+		{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+		{{ if .Paginator.HasPrev }}
+		<li>
+			<a href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</a>
+		</li>
+		{{ end }}
+		{{ end }}
+
+		{{ range .Paginator.Pagers }}
+		<li {{ if eq . .Paginator }} class="active" {{ end }}>
+			<a href="{{ $baseurl }}{{ .URL }}">
+				{{ .PageNumber }}
+			</a>
+		</li>
+		{{ end }}
+
+		<li class="active">
+			<a href="#">1</a>
+		</li>
+		<li>
+			<a href="#">2</a>
+		</li>
+		<li>
+			<a href="#">3</a>
+		</li>
+		<li>
+			<a href="#">4</a>
+		</li>
+		<li>
+			<a href="#">5</a>
+		</li>
+
+		{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+		{{ if .Paginator.HasNext }}
+		<li>
+			<a href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			</a>
+		</li>
+		{{ end }}
+		{{ end }}
+	</ul>
+</div>
+

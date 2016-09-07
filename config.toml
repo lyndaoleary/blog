@@ -1,0 +1,14 @@
+baseurl = "http://tombee.co.uk/"
+title = "Tom Barlow"
+languageCode = "en-gb"
+canonifyurls = true
+builddrafts = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  author = "Tom Barlow"
+  description = "Tom Barlow, a Galway based software engineer working for Docker, Inc."
+  disqusShortname = "tombee"
