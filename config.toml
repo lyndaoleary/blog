@@ -1,5 +1,5 @@
-baseurl = "http://tombee.co.uk/"
-title = "Tom Barlow"
+baseurl = "http://lyndaoleary.com"
+title = "Lynda O'Leary"
 languageCode = "en-gb"
 canonifyurls = true
 builddrafts = true
@@ -9,6 +9,6 @@ builddrafts = true
   tag = "tags"
 
 [params]
-  author = "Tom Barlow"
-  description = "Tom Barlow, a Galway based software engineer working for Docker, Inc."
-  disqusShortname = "tombee"
+  author = "Lynda O'Leary"
+  description = "Scrum Master based in Galway."
+  disqusShortname = "LOL"

@@ -225,7 +225,7 @@ $(document).ready(function() {
     jQuery(this).attr('id', 'tweets-' + index);
   }).each(function(index) {
     var TweetConfig = {
-      "profile": {"screenName": 'tomwbarlow'},
+      "profile": {"screenName": 'olearylynda'},
       "domId": '',
       "maxTweets": jQuery('#tweets-' + index).attr('data-amount'),
       "enableLinks": true,
@@ -254,8 +254,8 @@ $(document).ready(function() {
   // Instagram Feed
   if($('.instafeed').length){
     jQuery.fn.spectragram.accessData = {
-      accessToken: '26003216.81377b0.f11a9b646ec84af48a30043c79ac924d',
-      clientID: '81377b0c2e3342729f044dfa12445b9d'
+      accessToken: '777414932.da1b92d.b96e67ac84d6487f87fccdeb02561d78',
+      clientID: 'da1b92d01bb048acb5caadb100d75623'
     };
 
     $('.instafeed').each(function() {
@@ -265,7 +265,7 @@ $(document).ready(function() {
         max: 12
       });
     });
-  }   
+  }
 
 
 
@@ -275,11 +275,11 @@ $(document).ready(function() {
     $('.flickr-feed').each(function(){
       var userID = $(this).attr('data-user-id');
       var albumID = $(this).attr('data-album-id');
-      $(this).flickrPhotoStream({ id: userID, setId: albumID, container: '<li class="masonry-item" />' });   
+      $(this).flickrPhotoStream({ id: userID, setId: albumID, container: '<li class="masonry-item" />' });
       setTimeout(function(){
         initializeMasonry();
         window.dispatchEvent(new Event('resize'));
-      }, 1000); 
+      }, 1000);
     });
 
   }
@@ -289,7 +289,7 @@ $(document).ready(function() {
     $('.slider-all-controls').flexslider({
       start: function(slider){
         if(slider.find('.slides li:first-child').find('.fs-vid-background video').length){
-          slider.find('.slides li:first-child').find('.fs-vid-background video').get(0).play(); 
+          slider.find('.slides li:first-child').find('.fs-vid-background video').get(0).play();
         }
       },
       after: function(slider){
@@ -374,7 +374,7 @@ $(document).ready(function() {
   });
 
   jQuery(document).on('wheel mousewheel scroll', '.foundry_modal, .modal-screen', function(evt){
-    $(this).get(0).scrollTop += (evt.originalEvent.deltaY); 
+    $(this).get(0).scrollTop += (evt.originalEvent.deltaY);
     return false;
   });
 
@@ -408,7 +408,7 @@ $(document).ready(function() {
       linkedModal.find('video').get(0).play();
     }
     linkedModal.toggleClass('reveal-modal');
-    return false; 
+    return false;
   });
 
   // Autoshow modals
@@ -467,7 +467,7 @@ $(document).ready(function() {
             modal.removeClass('reveal-modal');
             $('.modal-screen').removeClass('reveal-modal');
           }
-        },delay); 
+        },delay);
       }
     }else{
       setTimeout(function(){
@@ -475,7 +475,7 @@ $(document).ready(function() {
           modal.removeClass('reveal-modal');
           $('.modal-screen').removeClass('reveal-modal');
         }
-      },delay); 
+      },delay);
     }
   });
 
@@ -931,13 +931,13 @@ $(document).ready(function() {
   }
 
   //
-  //    
+  //
   // End contact form code
   //
   //
 
 
-  // Get referrer from URL string 
+  // Get referrer from URL string
   if (getURLParameter("ref")) {
     $('form.form-email').append('<input type="text" name="referrer" class="hidden" value="' + getURLParameter("ref") + '"/>');
   }
@@ -974,13 +974,13 @@ $(document).ready(function() {
       script.type = 'text/javascript';
       script.src = 'https://maps.googleapis.com/maps/api/js?key='+apiKey+'&callback=initializeMaps';
       script.className = 'gMapsAPI';
-      document.body.appendChild(script);  
-    } 
+      document.body.appendChild(script);
+    }
   }
 
-}); 
+});
 
-$(window).load(function() { 
+$(window).load(function() {
   "use strict";
 
   // Initialize Masonry
@@ -1006,7 +1006,7 @@ $(window).load(function() {
   mr_firstSectionHeight = $('.main-container section:nth-of-type(1)').outerHeight(true);
 
 
-}); 
+});
 function updateNav() {
 
   var scrollY = mr_scrollTop;
@@ -1201,7 +1201,7 @@ window.initializeMaps = function(){
           if(address != undefined && address[0] != ""){
             geocoder.geocode( { 'address': address[0].replace('[nomarker]','')}, function(results, status) {
               if (status == google.maps.GeocoderStatus.OK) {
-                var map = new google.maps.Map(mapInstance, mapOptions); 
+                var map = new google.maps.Map(mapInstance, mapOptions);
                 map.setCenter(results[0].geometry.location);
 
                 address.forEach(function(address){
@@ -1241,7 +1241,7 @@ window.initializeMaps = function(){
           }
           else if(latitude != undefined && latitude != "" && latitude != false && longitude != undefined && longitude != "" && longitude != false ){
             mapOptions.center   = { lat: latitude, lng: longitude};
-            map = new google.maps.Map(mapInstance, mapOptions); 
+            map = new google.maps.Map(mapInstance, mapOptions);
             marker              = new google.maps.Marker({
               position: { lat: latitude, lng: longitude },
               map: map,
@@ -1251,7 +1251,7 @@ window.initializeMaps = function(){
 
           }
 
-      }); 
+      });
     }
   }
 }
@@ -1291,7 +1291,7 @@ function prepareSignup(iFrame){
   // Set action on the form
   form.attr('action', action);
 
-  // Clone form input fields from 
+  // Clone form input fields from
   jQuery(div).find('input, select, textarea').not('input[type="submit"]').each(function(){
     jQuery(this).clone().appendTo(form);
 
@@ -1370,5 +1370,3 @@ var mr_cookies = {
 /*\
   |*|  END COOKIE LIBRARY
   \*/
-
-
