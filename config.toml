@@ -10,5 +10,5 @@ builddrafts = true
 
 [params]
   author = "Lynda O'Leary"
-  description = "Scrum Master based in Galway."
+  description = "System Engineer based in Galway."
   disqusShortname = "LOL"
