@@ -4,7 +4,6 @@ title = "Speaking"
 tags = ["Speaking"]
 +++
 
-I attended the Docker Concepts with Phil Estes. Workshop resources include:
 <b>2017</b>
 <li>  </li>
 
