@@ -1,38 +1,33 @@
 {{ partial "header.html" . }}
 
-<section class="page-title page-title-4 image-bg overlay">
-	<div class="background-image-holder fadeIn" style="background: url(&quot;/img/cover8.jpg&quot;);">
-		<img alt="Background Image" class="background-image" src="/img/cover3.jpg" style="display: none;">
-	</div>
+<section class="page-title page-title-3 bg-dark">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				<h3 class="uppercase mb0">Blog</h3>
-			</div>
-			<div class="col-md-6 text-right">
-				<ol class="breadcrumb breadcrumb-2">
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li class="active">Speaking</li>
-				</ol>
+			<div class="col-sm-12 text-center">
+				<h3 class="uppercase mb0">{{ .Title }}</h3>
 			</div>
 		</div>
 		<!--end of row-->
 	</div>
 	<!--end of container-->
+	<ol class="breadcrumb breadcrumb-2">
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			<a href="/posts">Podcasts</a>
+		</li>
+		<li class="active">{{ .Title }}</li>
+	</ol>
 </section>
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				{{ range .Data.Pages }}
+			<div class="col-sm-10 col-sm-offset-1">
 				<div class="post-snippet mb64">
 					<div class="post-title">
 						<time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}" class="label">{{ .Date.Format "January 02, 2006" }}</time>
-						<a href="{{ .RelPermalink }}">
-							<h4 class="inline-block">{{ .Title }} {{ if .Draft }}(Draft){{ end }}</h4>
-						</a>
+						<h4 class="inline-block">{{ .Title }} {{ if .Draft }}(Draft){{ end }}</h4>
 					</div>
 					<ul class="post-meta">
 						{{ if isset .Params "tags" }}
@@ -47,11 +42,8 @@
 						{{ end }}
 					</ul>
 					<hr>
-					<p>{{ .Summary }}</p>
-					<a class="btn btn-sm" href="{{ .RelPermalink }}">Read More</a>
+					<p>{{ .Content }}</p>
 				</div>
-				{{ end }}
-				<!--end of post snippet-->
 			</div>
 			<!--end of nine col-->
 		</div>
