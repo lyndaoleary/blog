@@ -3061,6 +3061,8 @@ button[type="submit"] .form-loading {
 }
 /*!---------- 22. IMAGE TILES ----------*/
 img {
+  display: block;
+  margin: auto;
   max-width: 100%;
 }
 .image-tile {
